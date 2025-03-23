@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
-import PopularItem from "../hooks/PopularItems";
+import PopularItem from "../../hooks/PopularItems";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
+import { NavLink } from "react-router-dom";
 
-const PopularSection = () => {
+const NewSection = () => {
     const scrollRef = useRef<HTMLDivElement | null>(null);
     const [selectedCategory, setSelectedCategory] = useState("wisata");
 
@@ -13,15 +14,15 @@ const PopularSection = () => {
     };
 
     const categories = [...new Set(PopularItem.map(item => item.type))];
-    const filteredItems = PopularItem.filter(item => item.type === selectedCategory).slice(0, 5);
+    const filteredItems = PopularItem.filter(item => item.type === selectedCategory).slice(5, 10);
 
     return (
-        <div className="px-5 sm:px-10 md:px-20 py-10 md:py-15">
-            <h2 className="text-lg sm:text-2xl font-semibold mb-4 items-center">Populer di Wizh<span className="text-yellow-400">Nuansa!</span>!</h2>
+        <div className="px-5 sm:px-10 md:px-20 py-5 md:py-10">
+            <h2 className="text-lg sm:text-2xl font-semibold mb-4 items-center">Yang Baru di Wizh<span className="text-yellow-400">Nuansa!</span></h2>
             <div className="flex overflow-x-auto scrollbar-hide gap-2 mb-4 whitespace-nowrap">
                 {categories.map((category, index) => (
-                    <button 
-                        key={index} 
+                    <button
+                        key={index}
                         className={`px-3 py-2 rounded-full border ${selectedCategory === category ? 'bg-yellow-500 text-white' : 'text-gray-700'}`}
                         onClick={() => setSelectedCategory(category)}
                     >
@@ -35,14 +36,16 @@ const PopularSection = () => {
                 </button>
                 <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full">
                     {filteredItems.map((item, index) => (
-                        <div key={index} className="bg-white shadow-lg rounded-lg p-4 flex-shrink-0 w-64 sm:w-56 md:w-64 lg:w-72">
-                            <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-md" />
-                            <h3 className="text-sm font-bold mt-2">{item.title}</h3>
-                            <p className="text-xs text-gray-500">{item.location}</p>
-                            <p className="text-xs text-gray-500">{item.rating}</p>
-                            {item.oldPrice && <p className="text-xs text-gray-400 line-through">{item.oldPrice}</p>}
-                            <p className="text-lg text-yellow-500 font-bold">{item.price}</p>
-                        </div>
+                        <NavLink to={`/trip/${item.slug}`} key={index}>
+                            <div key={index} className="bg-white shadow-lg rounded-lg p-4 flex-shrink-0 w-64 sm:w-56 md:w-64 lg:w-72">
+                                <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-md" />
+                                <h3 className="text-sm font-bold mt-2">{item.title}</h3>
+                                <p className="text-xs text-gray-500">{item.location}</p>
+                                <p className="text-xs text-gray-500">{item.rating}</p>
+                                {item.oldPrice && <p className="text-xs text-gray-400 line-through">{item.oldPrice}</p>}
+                                <p className="text-md text-yellow-500 font-bold">{item.price}</p>
+                            </div>
+                        </NavLink>
                     ))}
                 </div>
                 <button className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" onClick={() => scroll(1)}>
@@ -53,4 +56,4 @@ const PopularSection = () => {
     );
 };
 
-export default PopularSection;
+export default NewSection;

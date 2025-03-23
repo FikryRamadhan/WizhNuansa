@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeroCategory } from '../interfaces/Category'
+import { HeroCategory } from '../../interfaces/Category'
 import { CalendarIcon, HomeIcon, PaperAirplaneIcon, TicketIcon } from '@heroicons/react/16/solid'
 import headImage from '../../public/images/head.jpg';
 
@@ -30,7 +30,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Kategori hanya muncul di layar besar */}
           <div className="hidden sm:grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-6">
             {categories.map((item, index) => (
               <div key={index} className="flex flex-col items-center">

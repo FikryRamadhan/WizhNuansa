@@ -1,4 +1,4 @@
-export interface PopularItemsInterface {
+export interface DetailProductInterface {
     title: string;
     location: string;
     rating: string;
@@ -8,5 +8,4 @@ export interface PopularItemsInterface {
     type: string;
     slug: string;
     fasilitas: string[];
-  }
-  
+}
