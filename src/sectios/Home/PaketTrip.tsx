@@ -26,7 +26,7 @@ const PaketTrip = () => {
                 </button>
                 <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full">
                     {data.map((item, index) => (
-                        <NavLink to={`/paket-trip/${item.slug}`} key={index}>
+                        <NavLink to={`/trip/${item.slug}`} key={index}>
                             <div key={index} className="bg-white shadow-lg rounded-lg p-4 flex-shrink-0 w-64 sm:w-56 md:w-64 lg:w-72">
                                 <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-md" />
                                 <h3 className="text-sm font-bold mt-2">{item.title}</h3>

@@ -1,11 +1,12 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import { getDetailProduct } from '../../hooks/DetailProduct';
+import { getDetailProduct, getDetilPaket } from '../../hooks/DetailProduct';
 
 const Header = () => {
   const { slug } = useParams<{ slug: string }>();
-  const item = slug ? getDetailProduct(slug) : undefined;
-  
+  const item = slug ? getDetailProduct(slug) ? getDetailProduct(slug) : getDetilPaket(slug) : undefined;
+
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 ">

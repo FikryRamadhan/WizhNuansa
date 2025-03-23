@@ -1,4 +1,4 @@
-import DetailProduct from "../pages/DetailProduct";
+import Detail from "../pages/Detail";
 import Home from "../pages/Home";
 
 const Routers = [
@@ -8,12 +8,8 @@ const Routers = [
     },
     {
         path: "/trip/:slug",
-        element: <DetailProduct />
+        element: <Detail />
     },
-    {
-        path: "/paket-trip/:slug",
-        element: <Home />
-    }
 ]
 
 export default Routers

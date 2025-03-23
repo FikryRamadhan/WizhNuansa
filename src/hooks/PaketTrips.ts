@@ -119,7 +119,7 @@ const paketTripsData: PaketTripsInterfaces[] = [
     pax: "Max 20 orang",
     location: "Jakarta, Indonesia",
     riview: "1.9rb Review",
-    slug: "historical-tour-in-jakarta", // Ditambahkan slug
+    slug: "historical-tour-in-jakarta",
   },
   {
     id: 9,
@@ -134,7 +134,7 @@ const paketTripsData: PaketTripsInterfaces[] = [
     pax: "Max 10 orang",
     location: "Flores, Indonesia",
     riview: "2.7rb Review",
-    slug: "island-hopping-in-flores", // Ditambahkan slug
+    slug: "island-hopping-in-flores",
   },
 ];
 

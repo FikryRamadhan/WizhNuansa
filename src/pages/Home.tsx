@@ -5,8 +5,11 @@ import PopularSection from '../sectios/Home/PopulaSection'
 import Footer from '../components/Footer'
 import NewSection from '../sectios/Home/NewSection'
 import PaketTrip from '../sectios/Home/PaketTrip'
+import PromoSection from '../sectios/Home/PromoSection'
+
 
 const Home = () => {
+
   return (
     <>
     <Navbar />
@@ -14,6 +17,8 @@ const Home = () => {
     <PopularSection />
     <NewSection />
     <PaketTrip />
+    <PromoSection />
+   
     <Footer />
     </>
   )
