@@ -28,7 +28,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed  top-0 left-0 w-full z-50 px-5 sm:px-5 md:px-20 transition-all duration-300 ${bgColor}`}>
+        <nav className={`fixed overflox-x-hidden top-0 left-0 w-full z-50 px-5 sm:px-5 md:px-20 transition-all duration-300 ${bgColor}`}>
 
             {/* Desktop and Mobile Layout */}
             <div className="">
