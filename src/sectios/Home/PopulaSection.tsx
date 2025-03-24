@@ -33,11 +33,11 @@ const PopularSection = () => {
             </div>
             <div className="relative w-full mt-5">
                 <button className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" onClick={() => scroll(-1)}>
-                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" data-aos="zoom-in-right"/>
+                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" />
                 </button>
-                <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full">
+                <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full"  data-aos="zoom-in-up">
                     {filteredItems.map((item, index) => (
-                        <NavLink to={`/trip/${item.slug}`} key={index} data-aos="zoom-in-up">
+                        <NavLink to={`/trip/${item.slug}`} key={index}>
                             <div key={index} className="bg-white shadow-lg rounded-lg p-4 flex-shrink-0 w-64 sm:w-56 md:w-64 lg:w-72">
                                 <img src={item.image} alt={item.title} className="w-full h-40 object-cover rounded-md" />
                                 <h3 className="text-sm font-bold mt-2">{item.title}</h3>

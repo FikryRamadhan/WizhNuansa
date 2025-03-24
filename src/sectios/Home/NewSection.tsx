@@ -32,7 +32,7 @@ const NewSection = () => {
             </div>
             <div className="relative w-full mt-5">
                 <button className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" onClick={() => scroll(-1)}>
-                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" data-aos="zoom-in-right"/>
+                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" />
                 </button>
                 <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full" data-aos="zoom-in-up">
                     {filteredItems.map((item, index) => (
