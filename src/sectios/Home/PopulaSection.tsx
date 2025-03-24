@@ -19,11 +19,10 @@ const PopularSection = () => {
     return (
         <div className="px-5 sm:px-10 md:px-20 py-5 mt-5 md:py-10">
             <h2 className="text-lg sm:text-2xl font-semibold mb-4 items-center" data-aos="fade-left">Populer di Wizh<span className="text-yellow-400">Nuansa!</span></h2>
-            <div className="flex overflow-x-auto scrollbar-hide gap-2 mb-4 whitespace-nowrap">
+            <div className="flex overflow-x-auto scrollbar-hide gap-2 mb-4 whitespace-nowrap" data-aos="zoom-in-left">
                 {categories.map((category, index) => (
                     <button
                         key={index}
-                        data-aos="zoom-in-left"
                         className={`px-3 py-2 rounded-full border ${selectedCategory === category ? 'bg-yellow-500 text-white' : 'text-gray-700'}`}
                         onClick={() => setSelectedCategory(category)}
                     >
