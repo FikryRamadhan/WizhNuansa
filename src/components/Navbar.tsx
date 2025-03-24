@@ -2,13 +2,14 @@ import { ArrowRightEndOnRectangleIcon } from '@heroicons/react/16/solid';
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    
     const [bgColor, setBgColor] = useState("bg-transparent");
     useEffect(() => {
         const handleScroll = () => {
@@ -23,6 +24,7 @@ export default function Navbar() {
         handleScroll(); // Untuk memastikan efek langsung berjalan
     
         return () => window.removeEventListener("scroll", handleScroll);
+
     }, []);
 
     return (
@@ -33,9 +35,9 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center space-x-4">
                         <div className="flex-shrink-0">
-                            <h1 className="text-xl font-bold text-gray-900">Wizh<span className='text-yellow-400'>Nuansa</span></h1>
+                            <h1 className="text-xl font-bold text-gray-900" data-aos="fade-down">Wizh<span className='text-yellow-400'>Nuansa</span></h1>
                         </div>
-                        <div className="flex-1 lg:ml-5">
+                        <div className="flex-1 lg:ml-5" data-aos="fade-down">
                             <div className="relative sm:flex items-center bg-gray-100 rounded-full px-3 py-1 hidden shadow-md">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.817-4.817A6 6 0 012 8z" clipRule="evenodd" />
@@ -53,7 +55,7 @@ export default function Navbar() {
                     {/* Right Section - Icons (visible on all screens) */}
                     <div className="flex items-center space-x-4">
                         <button className="text-gray-100 hover:text-gray-100"></button>
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-4" data-aos="fade-down">
                             <div className="flex items-center space-x-4">
                                 {/* Button Daftar */}
                                 <button className="text-gray-950 hidden bg-gray-100 hover:bg-gray-300 px-4 md:flex py-2 border border-gray-100 rounded-lg">
@@ -70,7 +72,7 @@ export default function Navbar() {
 
 
                         {/* Hamburger Menu Button (visible only on smaller screens) */}
-                        <button onClick={toggleMenu} className="md:hidden text-gray-950 hover:text-gray-900 focus:outline-none">
+                        <button onClick={toggleMenu} data-aos="fade-down" className="md:hidden text-gray-950 hover:text-gray-900 focus:outline-none">
                             {isMenuOpen ? (
                                 // X Icon
                                 <svg

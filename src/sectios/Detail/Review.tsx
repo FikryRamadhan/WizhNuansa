@@ -9,9 +9,9 @@ const Review = () => {
     return (
         <>
             <div className="mt-10">
-                <h2 className="text-xl sm:text-2xl font-semibold sm:font-bold">Review</h2>
-                <p className="text-md sm:text-lg text-gray-600">{item?.rating}{item.riview ? "/5 " + item.riview : ""}</p>
-                <div className="flex overflow-x-auto space-x-4 mt-4 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:space-x-0 sm:gap-4">
+                <h2 className="text-xl sm:text-2xl font-semibold sm:font-bold" data-aos="zoom-in-up">Review</h2>
+                <p className="text-md sm:text-lg text-gray-600" data-aos="zoom-in-left">{item?.rating}{item.riview ? "/5 " + item.riview : ""}</p>
+                <div data-aos="zoom-in-left"className="flex overflow-x-auto space-x-4 mt-4 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:space-x-0 sm:gap-4">
                     <div className="bg-gray-100 p-4 rounded-lg shadow-md min-w-[300px] sm:min-w-0">
                         <p className="font-bold">5,0/5 - Hashfiyandi Pratama Putra K</p>
                         <p className="text-sm text-gray-500">5 Mar 2025 - Trip Keluarga</p>

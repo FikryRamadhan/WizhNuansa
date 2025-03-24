@@ -6,7 +6,7 @@ const Breadcrumbs = () => {
     const pathSegments = location.pathname.split("/").filter((segment) => segment);
     
     return (
-        <nav className="text-sm py-2 sm:hidden">
+        <nav className="text-sm py-2 sm:hidden" data-aos="zoom-in-right">
             <ul className="flex flex-wrap items-center text-gray-600">
                 <li>
                     <Link to="/" className="text-yellow-600 hover:underline">

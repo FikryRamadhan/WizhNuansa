@@ -3,8 +3,8 @@ const Footer = () => {
         <footer className="bg-white py-10 px-5 md:px-20 items-center justify-center border-t border-0.5 border-gray-300 border-spacing-0.5">
             
             <div className="py-4 sm:hidden">
-                <h2 className="text-2xl font-bold text-gray-950">Wizh<span className="text-yellow-400">Nuansa</span></h2>
-                <div className="mt-4 space-y-2 text-sm text-gray-700">
+                <h2 className="text-2xl font-bold text-gray-950" data-aos="zoom-in-up">Wizh<span className="text-yellow-400">Nuansa</span></h2>
+                <div className="mt-4 space-y-2 text-sm text-gray-700" data-aos="zoom-in-up">
                     <p className="flex items-center gap-2">📱 WhatsApp: <a href="tel:+6285811500888" className="text-blue-600">+62 858 1150 0888</a></p>
                     <p className="flex items-center gap-2">✉️ Email: <a href="mailto:cs@tiket.com" className="text-blue-600">cs@WizhNuansa.com</a></p>
                     <p className="flex items-center gap-2">🎧 Pusat Panggilan:</p>
@@ -13,7 +13,7 @@ const Footer = () => {
             </div>
 
 
-            <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="zoom-in-up">
                 {/* Logo dan Kontak */}
                 <div className="hidden sm:block">
                     <h2 className="text-2xl font-bold text-gray-950">Wizh<span className="text-yellow-400">Nuansa</span></h2>

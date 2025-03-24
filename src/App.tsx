@@ -1,8 +1,14 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Routers from './utils/Routers'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 function App() {
-
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
       <Router>

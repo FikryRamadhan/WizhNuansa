@@ -5,7 +5,7 @@ const PromoSection = () => {
 
             <section className="flex flex-col md:flex-row items-center gap-8 p-6 sm:px-10 sm:py-10 md:px-20 md:py-15">
                 {/* Bagian Kiri - Teks */}
-                <div className="md:w-1/2">
+                <div className="md:w-1/2" data-aos="zoom-in-right">
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                         Banjir Promo dan Benefit, Liburan Jadi Hemat!
                     </h2>
@@ -32,19 +32,19 @@ const PromoSection = () => {
                 </div>
 
                 {/* Bagian Kanan - Gambar */}
-                <div className="md:w-1/2 flex justify-center">
+                <div className="md:w-1/2 flex justify-center" data-aos="zoom-in-left">
                     <img src={'/promo/1.png'} alt="Promo Illustration" className="max-w-xs md:max-w-md w-full" />
                 </div>
             </section>
 
             <section className="flex flex-col-reverse md:flex-row items-center gap-8 p-6 md:p-12">
                 {/* Bagian Kiri - Gambar */}
-                <div className="md:w-1/2 flex justify-center">
+                <div className="md:w-1/2 flex justify-center" data-aos="zoom-in-right">
                     <img src={"/promo/2.png"} alt="Flight Promotion" className="max-w-xs md:max-w-md w-full" />
                 </div>
 
                 {/* Bagian Kanan - Teks */}
-                <div className="md:w-1/2">
+                <div className="md:w-1/2" data-aos="zoom-in-left">
                     <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                         Dapatkan Harga Tiket Pesawat Murah ke Destinasi Favorit Anda
                     </h2>

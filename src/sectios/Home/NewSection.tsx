@@ -18,8 +18,8 @@ const NewSection = () => {
 
     return (
         <div className="px-5 sm:px-10 md:px-20 py-5 md:py-10">
-            <h2 className="text-lg sm:text-2xl font-semibold mb-4 items-center">Yang Baru di Wizh<span className="text-yellow-400">Nuansa!</span></h2>
-            <div className="flex overflow-x-auto scrollbar-hide gap-2 mb-4 whitespace-nowrap">
+            <h2 className="text-lg sm:text-2xl font-semibold mb-4 items-center" data-aos="zoom-in-left">Yang Baru di Wizh<span className="text-yellow-400">Nuansa!</span></h2>
+            <div className="flex overflow-x-auto scrollbar-hide gap-2 mb-4 whitespace-nowrap" data-aos="zoom-in-left">
                 {categories.map((category, index) => (
                     <button
                         key={index}
@@ -32,9 +32,9 @@ const NewSection = () => {
             </div>
             <div className="relative w-full mt-5">
                 <button className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" onClick={() => scroll(-1)}>
-                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" />
+                    <ChevronLeftIcon className="h-6 w-6 text-gray-700" data-aos="zoom-in-right"/>
                 </button>
-                <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full">
+                <div ref={scrollRef} className="flex space-x-4 overflow-x-auto scrollbar-hide p-2 w-full" data-aos="zoom-in-up">
                     {filteredItems.map((item, index) => (
                         <NavLink to={`/trip/${item.slug}`} key={index}>
                             <div key={index} className="bg-white shadow-lg rounded-lg p-4 flex-shrink-0 w-64 sm:w-56 md:w-64 lg:w-72">
@@ -49,7 +49,7 @@ const NewSection = () => {
                     ))}
                 </div>
                 <button className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md" onClick={() => scroll(1)}>
-                    <ChevronRightIcon className="h-6 w-6 text-gray-700" />
+                    <ChevronRightIcon className="h-6 w-6 text-gray-700" data-aos="zoom-in-left"/>
                 </button>
             </div>
         </div>
