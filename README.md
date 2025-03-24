@@ -16,9 +16,7 @@ Wizh Nuansa menghadirkan rekomendasi tempat wisata, tiket perjalanan, hingga akt
 ## How to use
 1. Clone the repo
 ``` bash
-git clone https://github.com/FikryRamadhan/WizhNuansa
-
-        
+git clone https://github.com/FikryRamadhan/WizhNuansa       
 ```
 
 2. Install dependencies
